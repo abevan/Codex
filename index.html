@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reward Recalibration Simulator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="controls">
+        <h1>Reward Recalibration Simulator</h1>
+        <p>
+          A conceptual 3D model that illustrates how a brain reward system can shift from
+          impulsive, high-intensity spikes toward steadier baseline motivation.
+        </p>
+
+        <label for="daysSlider">Recalibration timeline (days): <span id="dayValue">45</span></label>
+        <input id="daysSlider" type="range" min="1" max="180" value="45" />
+
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-label">Cue Reactivity</span>
+            <span id="cueValue" class="metric-value"></span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Baseline Satisfaction</span>
+            <span id="baselineValue" class="metric-value"></span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Executive Regulation</span>
+            <span id="execValue" class="metric-value"></span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">Reward Stability</span>
+            <span id="stabilityValue" class="metric-value"></span>
+          </div>
+        </div>
+
+        <button id="playButton" type="button">Pause Animation</button>
+      </section>
+
+      <section class="viz-panel">
+        <canvas id="brainCanvas"></canvas>
+      </section>
+    </main>
+
+    <script type="module" src="simulation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Segoe UI, Roboto, sans-serif;
+  background: #080b1a;
+  color: #eaf0ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #121939, #060811 60%);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  min-height: 100vh;
+}
+
+.controls {
+  padding: 1.25rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(7, 10, 24, 0.82);
+  backdrop-filter: blur(2px);
+}
+
+.controls h1 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+}
+
+.controls p {
+  margin-top: 0;
+  color: #c7d4ff;
+  line-height: 1.35;
+}
+
+label {
+  display: inline-block;
+  margin-top: 0.4rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+input[type='range'] {
+  width: 100%;
+  accent-color: #8fd2ff;
+}
+
+.metrics {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid rgba(143, 210, 255, 0.25);
+  border-radius: 0.45rem;
+  background: rgba(143, 210, 255, 0.06);
+}
+
+.metric-label {
+  color: #adc4ff;
+}
+
+.metric-value {
+  color: #f8fbff;
+  font-weight: 600;
+}
+
+#playButton {
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  color: #031025;
+  background: linear-gradient(90deg, #80b7ff, #90ebff);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.viz-panel {
+  position: relative;
+  min-height: 420px;
+}
+
+#brainCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .controls {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .viz-panel {
+    min-height: 60vh;
+  }
+}
